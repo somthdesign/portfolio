@@ -66,54 +66,7 @@ html .main .section-name-1 .box, body .main .section-name-1 .box {
   flex-direction: column;
   gap: 5rem;
 }
-html .main .section-name-1 .box .up, body .main .section-name-1 .box .up {
-  display: flex;
-  justify-content: space-between;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-html .main .section-name-1 .box .up .carrer, body .main .section-name-1 .box .up .carrer {
-  font-family: "Times New Roman", Times, serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.4rem;
-}
-html .main .section-name-1 .box .up .firstname, body .main .section-name-1 .box .up .firstname {
-  font-size: 1400%;
-  line-height: 10.5rem;
-}
-html .main .section-name-1 .box .down, body .main .section-name-1 .box .down {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-html .main .section-name-1 .box .down .scrldwn, body .main .section-name-1 .box .down .scrldwn {
-  padding: 0.5rem;
-  padding-right: 0.8rem;
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  width: -moz-fit-content;
-  width: fit-content;
-  align-items: center;
-  justify-content: left;
-}
-html .main .section-name-1 .box .down .scrldwn span, body .main .section-name-1 .box .down .scrldwn span {
-  font-size: 1rem;
-}
-html .main .section-name-1 .box .down .scrldwn img, body .main .section-name-1 .box .down .scrldwn img {
-  transition: 1s ease-in-out;
-  height: 1.6rem;
-}
-html .main .section-name-1 .box .down .surname, body .main .section-name-1 .box .down .surname {
-  font-size: 1400%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  bottom: 5rem;
-}
+
 html .main .footer, body .main .footer {
   background-color: rgb(255, 255, 255);
   height: 100vh;
