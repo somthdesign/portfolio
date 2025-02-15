@@ -1,5 +1,3 @@
-$nav-border:rgb(50, 50, 50);
-$a-link: rgba(255, 255, 255, 0.95);
 html, body {
   padding: 0;
   margin: 0;
@@ -17,7 +15,7 @@ html, body {
     opacity: 8%;
     z-index: 999;
   }
-  
+
   .preloader {
     height: 100vh;
     width: 100vw;
@@ -27,112 +25,116 @@ html, body {
     scroll
   }
   */
-  .main {
-    .navbar {
-      width: 100%;
-      position: fixed;
-      mix-blend-mode: difference;
-      z-index: 100;
-      .box {
-        padding: 1rem;
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        justify-content: space-between;
-        a {
-
-        }
-      }
-    }
-    .section-name-1::before {
-      content: ' ';
-      position: absolute;
-      z-index: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 12%;
-      background-image: url(https://i.gifer.com/5zWt.gif);/*https://i.gifer.com/IVvP.gif*/
-      background-position: 50% 0;
-      background-size: cover;
-    }
-    .section-name-1 {
-      width: auto;
-      height: 100vh;
-      background-color: rgb(0, 0, 0);
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      .box {
-        padding: 0 2rem;
-        z-index: 1;
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        line-height: 10.5rem;
-        gap: 2.5rem;
-        .up {
-          display: flex;
-          justify-content: left;
-          gap: 1.5rem;
-          .carrer {
-            font-family:'Times New Roman', Times, serif;
-            font-style: italic;
-            font-weight: 400;
-            font-size: 1.4rem;
-            line-height: 1.5rem;
-            width: 8rem;
-          }
-          .firstname {
-            font-size: 1400%;
+}
+html .main .navbar, body .main .navbar {
+  width: 100%;
+  position: fixed;
+  mix-blend-mode: difference;
+  z-index: 100;
+}
+html .main .navbar .box, body .main .navbar .box {
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+}
+html .main .section-name-1::before, body .main .section-name-1::before {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 12%;
+  background-image: url(https://i.gifer.com/5zWt.gif); /*https://i.gifer.com/IVvP.gif*/
+  background-position: 50% 0;
+  background-size: cover;
+}
+html .main .section-name-1, body .main .section-name-1 {
+  width: auto;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+html .main .section-name-1 .box, body .main .section-name-1 .box {
+  padding: 0 2rem;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  line-height: 10.5rem;
+  gap: 2.5rem;
+}
+html .main .section-name-1 .box .up, body .main .section-name-1 .box .up {
+  display: flex;
+  justify-content: left;
+  gap: 1.5rem;
+}
+html .main .section-name-1 .box .up .carrer, body .main .section-name-1 .box .up .carrer {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  width: 8rem;
+}
+html .main .section-name-1 .box .up .firstname, body .main .section-name-1 .box .up .firstname {
+  font-size: 1400%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media screen and (max-width: 600px) {
+  html .main .section-name-1 .box .up .firstname, body .main .section-name-1 .box .up .firstname {
+    font-size: 250%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
             user-select: none;
-          }
-          @media screen and (max-width:600px) {
-            .firstname {
-              font-size: 250%;
-              user-select: none;
-            }
-          }
-        }
-        .down {
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: baseline;
-          .scrldwn {
-            padding: 0.5rem;
-            padding-right: 0.8rem;
-            display: flex;
-            position: relative;
-            flex-direction: row;
-            width: fit-content;
-            align-items: center;
-            justify-content: left;
-            span {
-              font-size: 1rem;
-            }
-            img {
-              transition: 1s ease-in-out;
-              height: 1.6rem;
-            }
-          }
-          .surname {
-            font-size: 1400%;
-            user-select: none;
-            bottom: 5rem;
-          }
-          @media screen and (max-width:600px) {
-            .surname {
-              font-size: 250%;
-              user-select: none;
-            }
-          }
-        }
-      }
-    }
-    .footer {
-      background-color: rgb(255, 255, 255);
-      height: 100vh;
-      width:auto;
-    }
   }
 }
+html .main .section-name-1 .box .down, body .main .section-name-1 .box .down {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+html .main .section-name-1 .box .down .scrldwn, body .main .section-name-1 .box .down .scrldwn {
+  padding: 0.5rem;
+  padding-right: 0.8rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  justify-content: left;
+}
+html .main .section-name-1 .box .down .scrldwn span, body .main .section-name-1 .box .down .scrldwn span {
+  font-size: 1rem;
+}
+html .main .section-name-1 .box .down .scrldwn img, body .main .section-name-1 .box .down .scrldwn img {
+  transition: 1s ease-in-out;
+  height: 1.6rem;
+}
+html .main .section-name-1 .box .down .surname, body .main .section-name-1 .box .down .surname {
+  font-size: 1400%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  bottom: 5rem;
+}
+@media screen and (max-width: 600px) {
+  html .main .section-name-1 .box .down .surname, body .main .section-name-1 .box .down .surname {
+    font-size: 250%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+}
+html .main .footer, body .main .footer {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: auto;
+}/*# sourceMappingURL=main_stylesheet.css.map */
