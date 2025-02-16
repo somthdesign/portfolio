@@ -4,6 +4,12 @@ html, body {
   box-sizing: border-box;
   font-family: "Inter", serif;
   color: white;
+  background-color: #02010a;
+  /*
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  */
   /*
   .noise {
     height: 100vh;
@@ -26,6 +32,38 @@ html, body {
   }
   */
 }
+html ::-webkit-scrollbar, body ::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+}
+html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+html a, body a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: all 0.35s ease;
+}
+html a::before, body a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: blue;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+html a:hover, body a:hover {
+  color: rgb(255, 255, 255);
+}
+html a:hover::before, body a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
 html .main .navbar, body .main .navbar {
   width: 100%;
   position: fixed;
@@ -38,6 +76,10 @@ html .main .navbar .box, body .main .navbar .box {
   position: relative;
   flex-direction: row;
   justify-content: space-between;
+}
+html .main .navbar .box a, body .main .navbar .box a {
+  text-decoration: none;
+  color: white;
 }
 html .main .section-name-1::before, body .main .section-name-1::before {
   content: " ";
@@ -53,7 +95,7 @@ html .main .section-name-1::before, body .main .section-name-1::before {
 html .main .section-name-1, body .main .section-name-1 {
   width: auto;
   height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: #02010a;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -73,7 +115,7 @@ html .main .section-name-1 .box .up, body .main .section-name-1 .box .up {
   gap: 1.5rem;
 }
 html .main .section-name-1 .box .up .carrer, body .main .section-name-1 .box .up .carrer {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Sorts Mill Goudy", serif;
   font-style: italic;
   font-weight: 400;
   font-size: 1.4rem;
@@ -86,19 +128,12 @@ html .main .section-name-1 .box .up .firstname, body .main .section-name-1 .box 
      -moz-user-select: none;
           user-select: none;
 }
-@media screen and (max-width: 600px) {
-  html .main .section-name-1 .box .up .firstname, body .main .section-name-1 .box .up .firstname {
-    font-size: 250%;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-}
 html .main .section-name-1 .box .down, body .main .section-name-1 .box .down {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-bottom: 1rem;
 }
 html .main .section-name-1 .box .down .scrldwn, body .main .section-name-1 .box .down .scrldwn {
   padding: 0.5rem;
@@ -110,6 +145,7 @@ html .main .section-name-1 .box .down .scrldwn, body .main .section-name-1 .box 
   width: fit-content;
   align-items: center;
   justify-content: left;
+  line-height: normal;
 }
 html .main .section-name-1 .box .down .scrldwn span, body .main .section-name-1 .box .down .scrldwn span {
   font-size: 1rem;
@@ -125,16 +161,122 @@ html .main .section-name-1 .box .down .surname, body .main .section-name-1 .box 
           user-select: none;
   bottom: 5rem;
 }
-@media screen and (max-width: 600px) {
-  html .main .section-name-1 .box .down .surname, body .main .section-name-1 .box .down .surname {
-    font-size: 250%;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
+html .main .footer::before, body .main .footer::before {
+  content: " ";
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 12%;
+  background-image: url(https://i.gifer.com/5zWt.gif); /*https://i.gifer.com/IVvP.gif*/
+  background-position: 50% 0;
+  background-size: cover;
 }
 html .main .footer, body .main .footer {
-  background-color: rgb(255, 255, 255);
-  height: 100vh;
+  z-index: 1000;
+  position: relative;
+  background-color: #02010a;
+  max-height: 100vh;
   width: auto;
+  align-content: flex-end;
+  overflow: hidden;
+  /*
+  .marquee {
+    z-index: 1000;
+    position: relative;
+    background-color: black;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    overflow: hidden;
+    -webkit-user-drag: none;
+    user-select: none;
+    .track {
+      display: flex;
+      padding-left: 2rem;
+      gap: 2rem;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+      align-items: center;
+      span {
+        font-size: 3rem;
+        font-weight: 800;
+      }
+      img {
+        height: 2.2rem;
+        -webkit-user-drag: none;
+      }
+    }
+  }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  */
+}
+html .main .footer .box, body .main .footer .box {
+  position: relative;
+  padding: 0 24rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 121px;
+}
+html .main .footer .box .content, body .main .footer .box .content {
+  width: 100%;
+}
+html .main .footer .box .content .up, body .main .footer .box .content .up {
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+html .main .footer .box .content .up .left, html .main .footer .box .content .up .right, body .main .footer .box .content .up .left, body .main .footer .box .content .up .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+html .main .footer .box .content .up .left a, html .main .footer .box .content .up .right a, body .main .footer .box .content .up .left a, body .main .footer .box .content .up .right a {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+}
+html .main .footer .box .content .up .backtop, body .main .footer .box .content .up .backtop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+html .main .footer .box .content .up .backtop img, body .main .footer .box .content .up .backtop img {
+  height: 1.5rem;
+  rotate: 180deg;
+}
+html .main .footer .box .content .up .right, body .main .footer .box .content .up .right {
+  align-items: flex-end;
+}
+html .main .footer .box .content .mid, body .main .footer .box .content .mid {
+  padding-bottom: 121px;
+  display: flex;
+  justify-content: space-between;
+}
+html .main .footer .box .content .mid .left, body .main .footer .box .content .mid .left {
+  justify-items: left;
+}
+html .main .footer .box .content .mid .left .content, body .main .footer .box .content .mid .left .content {
+  font-size: 24px;
+}
+html .main .footer .box .content .mid .right, body .main .footer .box .content .mid .right {
+  justify-items: right;
+}
+html .main .footer .box .content .mid .right .content, body .main .footer .box .content .mid .right .content {
+  justify-items: right;
+  font-size: 24px;
+}
+html .main .footer .box .content .down, body .main .footer .box .content .down {
+  justify-self: right;
+}
+html .main .footer .box .background, body .main .footer .box .background {
+  position: relative;
+  width: 140%;
+  overflow: visible;
 }/*# sourceMappingURL=main_stylesheet.css.map */
