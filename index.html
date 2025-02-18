@@ -15,23 +15,65 @@
     <div class="preloader"></div>
 
     <div class="main">
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <div class="box">
-                <a><div class="link">PRACE</div></a>
                 <a><div class="link">O MNIE</div></a>
+                <a><div class="link">PRACE</div></a>
                 <a><div class="link">GALERIA</div></a>
                 <a href="mailto:rubaswojciech@gmail.com">KONTAKT</a>
             </div>
         </div>
-        <div id="HERO" class="section-name-1">
+        <div id="HERO" class="hero">
             <div class="box">
                 <div class="up">
-                    <span class="firstname">WOJCIECH</span>
+                    <span class="firstname"><img src="media/firstname-svg.svg" draggable="false"></span>
                     <span class="carrer"><span>Grafik Komputerowy, Programista,</span>
                 </div>
                 <div class="down">
                     <div class="scrldwn"><img src="media/arrow_down.svg"><span>&nbsp; &nbsp;{&nbsp; &nbsp;PRZEWIŃ W DÓŁ&nbsp; &nbsp;}</span></div>
-                    <span class="surname">RUBAS</span>
+                    <span class="surname"><img src="media/surname-svg.svg" draggable="false"></span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="marquee">
+            <div class="track">
+                <span>GRAFIK KOMPUTEROWY</span>
+                <span>PROGRAMISTA</span>
+                <span>GRAFIK KOMPUTEROWY</span>
+                <span>PROGRAMISTA</span>
+                <span>GRAFIK KOMPUTEROWY</span>
+                <span>PROGRAMISTA</span>
+                <span>GRAFIK KOMPUTEROWY</span>
+                <span>PROGRAMISTA</span>
+            </div>
+        </div> -->
+        <div class="main-content">
+            <div class="content">
+                <div class="myself">
+                    <div class="cat">O MNIE</div>
+                    <div class="content" id="short-txt">KIEROWANY PASJĄ DO TWORZENIA ESTETYCZNYCH I FUNKCJONALNYCH PROJEKTÓW CYFROWYCH, ROZWIJAM SWOJE UMIEJĘTNOŚCI W ŚWIECIE GRAFIKI KOMPUTEROWEJ I WEB DEVELOPMENTU. MAM DOPIERO 17 LAT I OD TRZECH LAT ZGŁĘBIAM ŚWIAT GRAFIKI KOMPUTEROWEJ, A OD KILKU MIESIĘCY ZAJMUJĘ SIĘ STRONAMI INTERNETOWYMI. KAŻDY PROJEKT TO DLA MNIE OKAZJA DO ROZWIJANIA UMIEJĘTNOŚCI I KREOWANIA UNIKALNYCH WIZUALNYCH DOŚWIADCZEŃ. SPRAWDŹ MOJE PRACE I ZOBACZ, JAK DESIGN SPOTYKA SIĘ Z KODEM!</div>
+                    <a><button onclick="toggleText()">SKRÓCONA WERSJA</button></a>
+                </div>
+                <div class="tech">
+                    <div class="cat">TECHNOLOGIE</div>
+                    <div class="content">HTML / CSS / SASS / ILLUSTRATOR / PHOTOSHOP / INDESIGN / FIGMA</div>
+                </div>
+                <div class="work">
+                    <div class="cat">NAJNOWSZE PROJEKTY</div>
+                    <div class="content">
+                        <hr>
+                        <div class="prace" id="praca-1">PRACE 1</div>
+                        <hr>
+                        <div class="prace" id="praca-2">PRACE 2</div>
+                        <hr>
+                        <div class="prace" id="praca-3">PRACE 3</div>
+                        <hr>
+                        <div class="prace" id="praca-4">PRACE 4</div>
+                        <hr>
+                        <div class="prace" id="praca-5">PRACE 5</div>
+                        <hr>
+                    </div>
+                    <a href="PRACE"><button>WIĘCEJ PROJEKTÓW</button></a>
                 </div>
             </div>
         </div>
@@ -44,7 +86,7 @@
                             <a href="">PRACE</a>
                             <a href="">GALERIA</a>
                         </div>
-                        <a href="#HERO"  class="backtop"><img src="media/arrow_down.svg">&nbsp; &nbsp;{&nbsp; &nbsp;Z POWROTEM NA GÓRE&nbsp; &nbsp;}</a>
+                        <a href=""  class="backtop"><img src="media/arrow_down.svg">&nbsp; &nbsp;{&nbsp; &nbsp;Z POWROTEM NA GÓRE&nbsp; &nbsp;}</a>
                         <div class="right">
                             <a href="">GitHub</a>
                             <a href="">Instagram</a>
@@ -55,15 +97,14 @@
                         <div class="left">
                             <div class="headl">KONTAKT</div>
                             <div class="content">
-                                <a href="tel:+48669750376">+0 123 456 789</div>
-                                <div>email@mail.com</div>
+                                <a href="tel:+48669750376">+48 669 750 376</a><br>
+                                <a href="mailto:rubaswojciech@gmail.com">rubaswojciech@gmail.com</a>
                             </div>
                         </div>
                         <div class="right">
                             <div class="headl">LOKALIZACJA</div>
                             <div class="content">
-                                <div>Street House, Mail address</div>
-                                <div>City, Country</div>
+                                <div>Kwiatków 11, 63-410<br>Ostrów Wielkopolski, Polska</div>
                             </div>
                         </div>
                     </div>
@@ -72,7 +113,7 @@
                     </div>
                 </div>
                 <div class="background">
-                    <img src="media/logo_name.svg" alt="">
+                    <img src="media/surname-svg.svg" alt="">
                 </div>
             </div>
                   
@@ -107,7 +148,7 @@
     <script>
         var cursor = new MouseFollower({
             className: 'mf-cursor -exclusion',
-            speed: 0.5,
+            speed: 0.6,
             
         });
     </script>
@@ -138,8 +179,46 @@
     
         requestAnimationFrame(raf)
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainContent = document.querySelector(".main-content");
+            const footer = document.querySelector(".footer");
+    
+            window.addEventListener("scroll", function () {
+                const rect = mainContent.getBoundingClientRect();
+                const midPoint = rect.top + rect.height / 2;
+                const viewportMid = window.innerHeight / 2;
+                
+                if (midPoint <= viewportMid) {
+                    footer.classList.add("active");
+                } else {
+                    footer.classList.remove("active");
+                }
+            });
+        });
+    </script>
+    <script>
+        function toggleText() {
+            let textElement = document.getElementById("short-txt");
+            textElement.innerText = 
+                textElement.innerText === "CZEŚĆ! NAZYWAM SIĘ WOJCIECH RUBAS, MAM 17 LAT I POCHODZĘ Z POLSKI. OD TRZECH MIESIĘCY ROZWIJAM SWOJE UMIEJĘTNOŚCI W TWORZENIU STRON INTERNETOWYCH, A OD TRZECH LAT ZAJMUJĘ SIĘ GRAFIKĄ KOMPUTEROWĄ. ZOBACZ, JAK DESIGN SPOTYKA SIĘ Z KODEM!" // TWORZĘ ESTETYCZNE I FUNKCJONALNE PROJEKTY CYFROWE, ŁĄCZĄC DESIGN Z NOWOCZESNYMI TECHNOLOGIAMI. MAM DOPIERO 17 LAT I OD TRZECH LAT ZGŁĘBIAM ŚWIAT GRAFIKI KOMPUTEROWEJ, A OD KILKU MIESIĘCY TWORZĘ STRONY INTERNETOWE. KAŻDY PROJEKT TO DLA MNIE OKAZJA DO ROZWIJANIA UMIEJĘTNOŚCI I KREOWANIA UNIKALNYCH WIZUALNYCH DOŚWIADCZEŃ.
+                ? "KIEROWANY PASJĄ DO TWORZENIA ESTETYCZNYCH I FUNKCJONALNYCH PROJEKTÓW CYFROWYCH, ROZWIJAM SWOJE UMIEJĘTNOŚCI W ŚWIECIE GRAFIKI KOMPUTEROWEJ I WEB DEVELOPMENTU. MAM DOPIERO 17 LAT I OD TRZECH LAT ZGŁĘBIAM ŚWIAT GRAFIKI KOMPUTEROWEJ, A OD KILKU MIESIĘCY ZAJMUJĘ SIĘ STRONAMI INTERNETOWYMI. KAŻDY PROJEKT TO DLA MNIE OKAZJA DO ROZWIJANIA UMIEJĘTNOŚCI I KREOWANIA UNIKALNYCH WIZUALNYCH DOŚWIADCZEŃ. SPRAWDŹ MOJE PRACE I ZOBACZ, JAK DESIGN SPOTYKA SIĘ Z KODEM!"
+                : "CZEŚĆ! NAZYWAM SIĘ WOJCIECH RUBAS, MAM 17 LAT I POCHODZĘ Z POLSKI. OD TRZECH MIESIĘCY ROZWIJAM SWOJE UMIEJĘTNOŚCI W TWORZENIU STRON INTERNETOWYCH, A OD TRZECH LAT ZAJMUJĘ SIĘ GRAFIKĄ KOMPUTEROWĄ. ZOBACZ, JAK DESIGN SPOTYKA SIĘ Z KODEM!";
+        }
+    </script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const documentHeight = document.documentElement.scrollHeight;
+            const threshold = 16;
 
-
-
+            if (scrollPosition >= documentHeight - threshold) {
+                navbar.classList.add("hidden");
+            } else {
+                navbar.classList.remove("hidden");
+            }
+        });
+    </script>
 </body>
 </html>

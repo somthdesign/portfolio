@@ -37,7 +37,7 @@ html ::-webkit-scrollbar, body ::-webkit-scrollbar {
   background-color: transparent;
 }
 html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.35);
 }
 html a, body a {
   position: relative;
@@ -52,7 +52,7 @@ html a::before, body a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: blue;
+  background-color: #2c16de;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -69,6 +69,7 @@ html .main .navbar, body .main .navbar {
   position: fixed;
   mix-blend-mode: difference;
   z-index: 100;
+  transition: transform 0.5s ease-in-out;
 }
 html .main .navbar .box, body .main .navbar .box {
   padding: 1rem;
@@ -81,7 +82,7 @@ html .main .navbar .box a, body .main .navbar .box a {
   text-decoration: none;
   color: white;
 }
-html .main .section-name-1::before, body .main .section-name-1::before {
+html .main .hero::before, body .main .hero::before {
   content: " ";
   position: absolute;
   z-index: 0;
@@ -92,7 +93,10 @@ html .main .section-name-1::before, body .main .section-name-1::before {
   background-position: 50% 0;
   background-size: cover;
 }
-html .main .section-name-1, body .main .section-name-1 {
+html .main .hero, body .main .hero {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   width: auto;
   height: 100vh;
   background-color: #02010a;
@@ -100,21 +104,23 @@ html .main .section-name-1, body .main .section-name-1 {
   justify-content: flex-end;
   flex-direction: column;
 }
-html .main .section-name-1 .box, body .main .section-name-1 .box {
+html .main .hero .box, body .main .hero .box {
   padding: 0 2rem;
   z-index: 1;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  line-height: 10.5rem;
   gap: 2.5rem;
 }
-html .main .section-name-1 .box .up, body .main .section-name-1 .box .up {
+html .main .hero .box .up, body .main .hero .box .up {
+  position: relative;
+  top: 1.5rem;
   display: flex;
   justify-content: left;
   gap: 1.5rem;
 }
-html .main .section-name-1 .box .up .carrer, body .main .section-name-1 .box .up .carrer {
+html .main .hero .box .up .carrer, body .main .hero .box .up .carrer {
+  width: 30%;
   font-family: "Sorts Mill Goudy", serif;
   font-style: italic;
   font-weight: 400;
@@ -122,20 +128,22 @@ html .main .section-name-1 .box .up .carrer, body .main .section-name-1 .box .up
   line-height: 1.5rem;
   width: 8rem;
 }
-html .main .section-name-1 .box .up .firstname, body .main .section-name-1 .box .up .firstname {
-  font-size: 1400%;
+html .main .hero .box .up .firstname, body .main .hero .box .up .firstname {
+  width: 70%;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-html .main .section-name-1 .box .down, body .main .section-name-1 .box .down {
+html .main .hero .box .down, body .main .hero .box .down {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding-bottom: 1rem;
 }
-html .main .section-name-1 .box .down .scrldwn, body .main .section-name-1 .box .down .scrldwn {
+html .main .hero .box .down .scrldwn, body .main .hero .box .down .scrldwn {
+  width: 55%;
   padding: 0.5rem;
   padding-right: 0.8rem;
   display: flex;
@@ -147,19 +155,71 @@ html .main .section-name-1 .box .down .scrldwn, body .main .section-name-1 .box 
   justify-content: left;
   line-height: normal;
 }
-html .main .section-name-1 .box .down .scrldwn span, body .main .section-name-1 .box .down .scrldwn span {
+html .main .hero .box .down .scrldwn span, body .main .hero .box .down .scrldwn span {
   font-size: 1rem;
 }
-html .main .section-name-1 .box .down .scrldwn img, body .main .section-name-1 .box .down .scrldwn img {
-  transition: 1s ease-in-out;
+html .main .hero .box .down .scrldwn img, body .main .hero .box .down .scrldwn img {
   height: 1.6rem;
 }
-html .main .section-name-1 .box .down .surname, body .main .section-name-1 .box .down .surname {
-  font-size: 1400%;
+html .main .hero .box .down .surname, body .main .hero .box .down .surname {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   bottom: 5rem;
+  width: 45%;
+}
+html .main .main-content, body .main .main-content {
+  margin: 1rem 0;
+  position: relative;
+  height: auto;
+  z-index: 2;
+  background-color: #02010a;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 10rem 4rem;
+}
+html .main .main-content .content, body .main .main-content .content {
+  height: 100%;
+  justify-items: center;
+  gap: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+html .main .main-content .content .myself, html .main .main-content .content .tech, html .main .main-content .content .work, body .main .main-content .content .myself, body .main .main-content .content .tech, body .main .main-content .content .work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+html .main .main-content .content .myself .cat, html .main .main-content .content .tech .cat, html .main .main-content .content .work .cat, body .main .main-content .content .myself .cat, body .main .main-content .content .tech .cat, body .main .main-content .content .work .cat {
+  font-size: 150%;
+}
+html .main .main-content .content .myself .content, html .main .main-content .content .tech .content, html .main .main-content .content .work .content, body .main .main-content .content .myself .content, body .main .main-content .content .tech .content, body .main .main-content .content .work .content {
+  text-align: center;
+  font-weight: 500;
+  font-size: 300%;
+}
+html .main .main-content .content .myself button, html .main .main-content .content .tech button, html .main .main-content .content .work button, body .main .main-content .content .myself button, body .main .main-content .content .tech button, body .main .main-content .content .work button {
+  font-size: 100%;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: white;
+}
+html .main .main-content .content .work .content, body .main .main-content .content .work .content {
+  width: 100%;
+  gap: 1rem;
+}
+html .main .main-content .content .work .content hr, body .main .main-content .content .work .content hr {
+  width: 100%;
+  height: 0;
+  border: 0;
+  border-top: 1px solid white;
+}
+html .main .main-content .content .work .content .prace, body .main .main-content .content .work .content .prace {
+  width: 100%;
 }
 html .main .footer::before, body .main .footer::before {
   content: " ";
@@ -173,46 +233,13 @@ html .main .footer::before, body .main .footer::before {
   background-size: cover;
 }
 html .main .footer, body .main .footer {
-  z-index: 1000;
-  position: relative;
+  position: sticky;
+  bottom: 0;
   background-color: #02010a;
-  max-height: 100vh;
+  height: 100vh;
   width: auto;
   align-content: flex-end;
   overflow: hidden;
-  /*
-  .marquee {
-    z-index: 1000;
-    position: relative;
-    background-color: black;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    padding: 1rem;
-    overflow: hidden;
-    -webkit-user-drag: none;
-    user-select: none;
-    .track {
-      display: flex;
-      padding-left: 2rem;
-      gap: 2rem;
-      width: max-content;
-      animation: scroll 20s linear infinite;
-      align-items: center;
-      span {
-        font-size: 3rem;
-        font-weight: 800;
-      }
-      img {
-        height: 2.2rem;
-        -webkit-user-drag: none;
-      }
-    }
-  }
-  @keyframes scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-  */
 }
 html .main .footer .box, body .main .footer .box {
   position: relative;
@@ -269,7 +296,7 @@ html .main .footer .box .content .mid .right, body .main .footer .box .content .
   justify-items: right;
 }
 html .main .footer .box .content .mid .right .content, body .main .footer .box .content .mid .right .content {
-  justify-items: right;
+  text-align: right;
   font-size: 24px;
 }
 html .main .footer .box .content .down, body .main .footer .box .content .down {
@@ -279,4 +306,10 @@ html .main .footer .box .background, body .main .footer .box .background {
   position: relative;
   width: 140%;
   overflow: visible;
+}
+html .main .active, body .main .active {
+  z-index: 1;
+}
+html .main .hidden, body .main .hidden {
+  transform: translateY(-100%);
 }/*# sourceMappingURL=main_stylesheet.css.map */
