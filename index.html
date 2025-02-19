@@ -52,7 +52,7 @@
                 <div class="myself">
                     <div class="cat">O MNIE</div>
                     <div class="content" id="short-txt">KIEROWANY PASJĄ DO TWORZENIA ESTETYCZNYCH I FUNKCJONALNYCH PROJEKTÓW CYFROWYCH, ROZWIJAM SWOJE UMIEJĘTNOŚCI W ŚWIECIE GRAFIKI KOMPUTEROWEJ I WEB DEVELOPMENTU. MAM DOPIERO 17 LAT I OD TRZECH LAT ZGŁĘBIAM ŚWIAT GRAFIKI KOMPUTEROWEJ, A OD KILKU MIESIĘCY ZAJMUJĘ SIĘ STRONAMI INTERNETOWYMI. KAŻDY PROJEKT TO DLA MNIE OKAZJA DO ROZWIJANIA UMIEJĘTNOŚCI I KREOWANIA UNIKALNYCH WIZUALNYCH DOŚWIADCZEŃ. SPRAWDŹ MOJE PRACE I ZOBACZ, JAK DESIGN SPOTYKA SIĘ Z KODEM!</div>
-                    <a><button onclick="toggleText()">SKRÓCONA WERSJA</button></a>
+                    <a class="button"><button onclick="toggleText()">SKRÓCONA WERSJA</button></a>
                 </div>
                 <div class="tech">
                     <div class="cat">TECHNOLOGIE</div>
@@ -62,18 +62,14 @@
                     <div class="cat">NAJNOWSZE PROJEKTY</div>
                     <div class="content">
                         <hr>
-                        <div class="prace" id="praca-1">PRACE 1</div>
+                        <a><div class="prace" id="praca-2" data-cursor="-inverse" data-cursor-stick data-cursor-img="media/w_straighten_triangles.svg"><span>TRÓJKĄTY PROSTOKĄTNE</span><span>PLAKAT</span></div></a>
                         <hr>
-                        <div class="prace" id="praca-2">PRACE 2</div>
+                        <a><div class="prace" id="praca-1" data-cursor="-inverse" data-cursor-stick data-cursor-img="media/w_logo_design.svg"><span>WIOSKA BOŻONARODZENIOWA KWIATKÓW</span><span>BRANDING</span></div></a>
                         <hr>
-                        <div class="prace" id="praca-3">PRACE 3</div>
-                        <hr>
-                        <div class="prace" id="praca-4">PRACE 4</div>
-                        <hr>
-                        <div class="prace" id="praca-5">PRACE 5</div>
+                        <a><div class="prace" id="praca-3" data-cursor="-inverse" data-cursor-stick data-cursor-img="media/w_toyota_poster.svg"><span>TOYOTA</span><span>PLAKAT</span></div></a>
                         <hr>
                     </div>
-                    <a href="PRACE"><button>WIĘCEJ PROJEKTÓW</button></a>
+                    <a href="PRACE" class="button"><button>WIĘCEJ PROJEKTÓW</button></a>
                 </div>
             </div>
         </div>
@@ -88,7 +84,7 @@
                         </div>
                         <a href=""  class="backtop"><img src="media/arrow_down.svg">&nbsp; &nbsp;{&nbsp; &nbsp;Z POWROTEM NA GÓRE&nbsp; &nbsp;}</a>
                         <div class="right">
-                            <a href="github.com/somthdesign">GitHub</a>
+                            <a href="">GitHub</a>
                             <a href="">Instagram</a>
                             <a href="">X (Twitter)</a>
                         </div>
@@ -97,14 +93,14 @@
                         <div class="left">
                             <div class="headl">KONTAKT</div>
                             <div class="content">
-                                <a href="tel:+0123456789">+0 123 456 789</a><br>
-                                <a href="mailto:email@email.com">email@email.com</a>
+                                <a href="tel:+48669750376">+48 669 750 376</a><br>
+                                <a href="mailto:rubaswojciech@gmail.com">rubaswojciech@gmail.com</a>
                             </div>
                         </div>
                         <div class="right">
                             <div class="headl">LOKALIZACJA</div>
                             <div class="content">
-                                <div>Street, Post number<br>City, Country</div>
+                                <div>Kwiatków 11, 63-410<br>Ostrów Wielkopolski, Polska</div>
                             </div>
                         </div>
                     </div>
@@ -148,8 +144,9 @@
     <script>
         var cursor = new MouseFollower({
             className: 'mf-cursor -exclusion',
+            container: document.body,
             speed: 0.6,
-            
+            skewingMedia: 0,
         });
     </script>
     <!--smooth scroll - only works when the height is set properly-->
