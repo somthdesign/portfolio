@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .content-top {
+            height: 100vh;
+            background-color: blue;
+            position: sticky;
+            z-index: 0;
+            top: 0;
+        }
+        .content-mid {
+            height: 200vh;
+            position: relative;
+            background-color: red;
+            z-index: 1;
+        }
+        .content-bottom {
+            position: sticky;
+            bottom: 0;
+            height: 100vh;
+            background-color: green;
+            z-index: -1;
+            transition: z-index 0.3s ease;
+        }
+        .active {
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-top">a</div>
+    <div class="content-mid"></div>
+    <div class="content-bottom"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const midElement = document.querySelector(".content-mid");
+            const bottomElement = document.querySelector(".content-bottom");
+
+            window.addEventListener("scroll", function () {
+                const rect = midElement.getBoundingClientRect();
+                const midPoint = rect.top + rect.height / 2;
+                
+                if (midPoint <= window.innerHeight / 2) {
+                    bottomElement.classList.add("active");
+                } else {
+                    bottomElement.classList.remove("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
