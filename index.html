@@ -15,15 +15,15 @@
     <div class="preloader"></div>
 
     <div class="main">
+        <div class="top" id="hero"></div>
         <div class="navbar" id="navbar">
             <div class="box">
                 <a><div class="link">O MNIE</div></a>
                 <a href="index2.html"><div class="link">PRACE</div></a>
-                <a><div class="link">GALERIA</div></a>
                 <a href="mailto:rubaswojciech@gmail.com">KONTAKT</a>
             </div>
         </div>
-        <div id="HERO" class="hero">
+        <div class="hero">
             <div class="box">
                 <div class="up">
                     <span class="firstname"><img src="media/firstname-svg.svg" draggable="false"></span>
@@ -49,7 +49,7 @@
         </div> -->
         <div class="main-content">
             <div class="content">
-                <div class="myself">
+                <div class="myself" id="myself">
                     <div class="cat">O MNIE</div>
                     <div class="content" id="short-txt">KIEROWANY PASJĄ DO TWORZENIA ESTETYCZNYCH I FUNKCJONALNYCH PROJEKTÓW CYFROWYCH, ROZWIJAM SWOJE UMIEJĘTNOŚCI W ŚWIECIE GRAFIKI KOMPUTEROWEJ I WEB DEVELOPMENTU. MAM DOPIERO 17 LAT I OD TRZECH LAT ZGŁĘBIAM ŚWIAT GRAFIKI KOMPUTEROWEJ, A OD KILKU MIESIĘCY ZAJMUJĘ SIĘ STRONAMI INTERNETOWYMI. KAŻDY PROJEKT TO DLA MNIE OKAZJA DO ROZWIJANIA UMIEJĘTNOŚCI I KREOWANIA UNIKALNYCH WIZUALNYCH DOŚWIADCZEŃ. SPRAWDŹ MOJE PRACE I ZOBACZ, JAK DESIGN SPOTYKA SIĘ Z KODEM!</div>
                     <a class="button"><button onclick="toggleText()">SKRÓCONA WERSJA</button></a>
@@ -58,7 +58,7 @@
                     <div class="cat">TECHNOLOGIE</div>
                     <div class="content">HTML / CSS / SASS / ILLUSTRATOR / PHOTOSHOP / INDESIGN / FIGMA</div>
                 </div>
-                <div class="work">
+                <div class="work" id="work">
                     <div class="cat">NAJNOWSZE PROJEKTY</div>
                     <div class="content">
                         <hr>
@@ -82,7 +82,7 @@
                             <a href="">PRACE</a>
                             <a href="">GALERIA</a>
                         </div>
-                        <a href=""  class="backtop"><img src="media/arrow_down.svg">&nbsp; &nbsp;{&nbsp; &nbsp;Z POWROTEM NA GÓRE&nbsp; &nbsp;}</a>
+                        <a href="#hero" onclick="lenis.scrollTo('#hero',{duration:2})" class="backtop"><img src="media/arrow_down.svg">&nbsp; &nbsp;{&nbsp; &nbsp;Z POWROTEM NA GÓRE&nbsp; &nbsp;}</a>
                         <div class="right">
                             <a href="">GitHub</a>
                             <a href="">Instagram</a>
@@ -93,14 +93,14 @@
                         <div class="left">
                             <div class="headl">KONTAKT</div>
                             <div class="content">
-                                <a href="tel:+0123456789">+0 123 456 789</a><br>
-                                <a href="mailto:mail@mail.com">mailh@mail.com</a>
+                                <a href="tel:+48669750376">+48 669 750 376</a><br>
+                                <a href="mailto:rubaswojciech@gmail.com">rubaswojciech@gmail.com</a>
                             </div>
                         </div>
                         <div class="right">
                             <div class="headl">LOKALIZACJA</div>
                             <div class="content">
-                                <div>Street, Post number<br>City, Country</div>
+                                <div>Kwiatków 11, 63-410<br>Ostrów Wielkopolski, Polska</div>
                             </div>
                         </div>
                     </div>
@@ -153,15 +153,16 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
     <script>
         const lenis = new Lenis({
-        duration: 1.5,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-        direction: 'vertical', // vertical, horizontal
-        gestureDirection: 'vertical', // vertical, horizontal, both
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-        infinite: false,
+            anchors: true,
+            duration: 1,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+            direction: 'vertical', // vertical, horizontal
+            gestureDirection: 'vertical', // vertical, horizontal, both
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
         })
     
         //get scroll value
