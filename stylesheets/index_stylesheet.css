@@ -35,10 +35,10 @@ html, body {
 }
 html ::-webkit-scrollbar, body ::-webkit-scrollbar {
   width: 0.5rem;
-  background-color: transparent;
+  background-color: rgba(253, 254, 245, 0.1);
 }
 html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgb(255, 255, 255);
 }
 html .main .top, body .main .top {
   height: 0px;

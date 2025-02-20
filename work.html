@@ -3,59 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        html,body {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .content-top {
-            height: 100vh;
-            background-color: blue;
-            position: sticky;
-            z-index: 0;
-            top: 0;
-        }
-        .content-mid {
-            height: 200vh;
-            position: relative;
-            background-color: red;
-            z-index: 1;
-        }
-        .content-bottom {
-            position: sticky;
-            bottom: 0;
-            height: 100vh;
-            background-color: green;
-            z-index: -1;
-            transition: z-index 0.3s ease;
-        }
-        .active {
-            z-index: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="stylesheets/work_stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kings&family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
 </head>
 <body>
-    <div class="content-top">a</div>
-    <div class="content-mid"></div>
-    <div class="content-bottom"></div>
-
+    <div class="main">
+        <div class="top" id="hero"></div>
+        <div class="navbar" id="navbar">
+            <div class="box">
+                <a class="link"href="index.html">O MNIE</a>
+                <a class="link" href="work.html">PRACE</a>
+                <a href="mailto:rubaswojciech@gmail.com">KONTAKT</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content">
+                <div class="box" id="box-1">
+                    <img src="" alt="">
+                    <div class="undercontent">HELLO</div>
+                </div>
+                <div class="box" id="box-2">
+                    <img src="" alt="">
+                    <div class="undercontent">WORLD</div>
+                </div>
+                <div class="box" id="box-3">
+                    <img src="" alt="">
+                    <div class="undercontent">HELLO</div>
+                </div>
+                <div class="box" id="box-1">
+                    <img src="" alt="">
+                    <div class="undercontent">WORLD</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="box">
+                <div class="content">
+                    <div class="up">
+                        <div class="left">
+                            <a href="">O MNIE</a>
+                            <a href="">PRACE</a>
+                        </div>
+                        <a href="#hero" onclick="lenis.scrollTo('#hero',{duration:2})" class="backtop"><img src="media/arrow_down.svg">&nbsp; &nbsp;{&nbsp; &nbsp;Z POWROTEM NA GÓRE&nbsp; &nbsp;}</a>
+                        <div class="right">
+                            <a href="">GitHub</a>
+                            <a href="">Instagram</a>
+                            <a href="">X (Twitter)</a>
+                        </div>
+                    </div>
+                    <div class="mid">
+                        <div class="left">
+                            <div class="headl">KONTAKT</div>
+                            <div class="content">
+                                <a href="tel:+48669750376">+48 669 750 376</a><br>
+                                <a href="mailto:rubaswojciech@gmail.com">rubaswojciech@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="headl">LOKALIZACJA</div>
+                            <div class="content">
+                                <div>Kwiatków 11, 63-410<br>Ostrów Wielkopolski, Polska</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="down">
+                        <span>© WOJCIECH RUBAS</span>
+                    </div>
+                </div>
+                <div class="background">
+                    <img src="media/surname-svg.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const midElement = document.querySelector(".content-mid");
-            const bottomElement = document.querySelector(".content-bottom");
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            const scrollPosition = window.innerHeight + window.scrollY;
+            const documentHeight = document.documentElement.scrollHeight;
+            const threshold = 16;
 
-            window.addEventListener("scroll", function () {
-                const rect = midElement.getBoundingClientRect();
-                const midPoint = rect.top + rect.height / 2;
-                
-                if (midPoint <= window.innerHeight / 2) {
-                    bottomElement.classList.add("active");
-                } else {
-                    bottomElement.classList.remove("active");
-                }
-            });
+            if (scrollPosition >= documentHeight - threshold) {
+                navbar.classList.add("hidden");
+            } else {
+                navbar.classList.remove("hidden");
+            }
         });
     </script>
 </body>
