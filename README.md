@@ -1,4 +1,4 @@
-# [Visit my site 👋](https://portfolio.github.io)
+# [Visit my site 👋](https://somthdesign.github.io/portfolio)
 
 # About
 
