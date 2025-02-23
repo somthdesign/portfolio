@@ -1,10 +1,10 @@
 html, body {
+  scroll-behavior: smooth;
   scroll-behavior: initial;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", serif;
-  color: white;
   background-color: #02010a;
 }
 html ::-webkit-scrollbar, body ::-webkit-scrollbar {
@@ -59,9 +59,8 @@ html .main .navbar .box a:hover::before, body .main .navbar .box a:hover::before
   transform: scaleX(1);
 }
 html .main .main-content, body .main .main-content {
-  z-index: 2;
+  z-index: 10;
   position: relative;
-  overflow: hidden;
 }
 html .main .main-content .content, body .main .main-content .content {
   height: auto;
@@ -76,18 +75,44 @@ html .main .main-content .content .box, body .main .main-content .content .box {
   box-sizing: border-box;
   border: 1px solid #02010a;
   background-color: white;
-  padding: 3rem;
+  padding: 4rem;
 }
-html .main .main-content .content .box img, body .main .main-content .content .box img {
+html .main .main-content .content .box .img, body .main .main-content .content .box .img {
   width: 100%;
-  height: 100%;
-  background-color: #02010a;
+  height: 96%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 html .main .main-content .content .box .undercontent, body .main .main-content .content .box .undercontent {
+  padding-top: 1rem;
   height: -moz-fit-content;
   height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+html .main .main-content .content .box .undercontent .left, body .main .main-content .content .box .undercontent .left {
   width: -moz-fit-content;
   width: fit-content;
+  justify-items: left;
+}
+html .main .main-content .content .box .undercontent .left .title, body .main .main-content .content .box .undercontent .left .title {
+  font-size: 1.25em;
+}
+html .main .main-content .content .box .undercontent .left .subtitle, body .main .main-content .content .box .undercontent .left .subtitle {
+  font-size: medium;
+}
+html .main .main-content .content .box .undercontent .right, body .main .main-content .content .box .undercontent .right {
+  opacity: 55%;
+  width: 60%;
+  text-align: right;
+}
+html .main .main-content .content #box-1 .img, html .main .main-content .content #box-2 .img, body .main .main-content .content #box-1 .img, body .main .main-content .content #box-2 .img {
+  border: 1px solid #02010a;
+}
+html .main .main-content .content #box-3 .img, html .main .main-content .content #box-4 .img, body .main .main-content .content #box-3 .img, body .main .main-content .content #box-4 .img {
+  background-size: cover;
 }
 html .main .footer::before, body .main .footer::before {
   content: " ";
@@ -152,6 +177,7 @@ html .main .footer .box .content .mid, body .main .footer .box .content .mid {
   padding-bottom: 121px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 html .main .footer .box .content .mid .left, body .main .footer .box .content .mid .left {
   justify-items: left;
@@ -198,9 +224,6 @@ html .main .footer a:hover, body .main .footer a:hover {
 html .main .footer a:hover::before, body .main .footer a:hover::before {
   visibility: visible;
   transform: scaleX(1);
-}
-html .main .active, body .main .active {
-  z-index: 1;
 }
 html .main .hidden, body .main .hidden {
   transform: translateY(-100%);
