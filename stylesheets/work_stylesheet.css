@@ -108,10 +108,10 @@ html .main .main-content .content .box .undercontent .right, body .main .main-co
   width: 60%;
   text-align: right;
 }
-html .main .main-content .content #box-1 .img, html .main .main-content .content #box-2 .img, body .main .main-content .content #box-1 .img, body .main .main-content .content #box-2 .img {
+html .main .main-content .content #box-1 .img, html .main .main-content .content #box-2 .img, html .main .main-content .content #box-3 .img, body .main .main-content .content #box-1 .img, body .main .main-content .content #box-2 .img, body .main .main-content .content #box-3 .img {
   border: 1px solid #02010a;
 }
-html .main .main-content .content #box-3 .img, html .main .main-content .content #box-4 .img, body .main .main-content .content #box-3 .img, body .main .main-content .content #box-4 .img {
+html .main .main-content .content #box-4 .img, body .main .main-content .content #box-4 .img {
   background-size: cover;
 }
 html .main .footer::before, body .main .footer::before {
