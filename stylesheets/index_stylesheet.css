@@ -183,10 +183,9 @@ html .main .main-content, body .main .main-content {
 html .main .main-content .content, body .main .main-content .content {
   height: 100%;
   justify-items: center;
-  gap: 10rem;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 8rem;
 }
 html .main .main-content .content .myself, html .main .main-content .content .tech, html .main .main-content .content .work, body .main .main-content .content .myself, body .main .main-content .content .tech, body .main .main-content .content .work {
   display: flex;
@@ -221,11 +220,12 @@ html .main .main-content .content .myself a.button:hover::before, html .main .ma
 }
 html .main .main-content .content .myself .cat, html .main .main-content .content .tech .cat, html .main .main-content .content .work .cat, body .main .main-content .content .myself .cat, body .main .main-content .content .tech .cat, body .main .main-content .content .work .cat {
   font-size: 150%;
+  font-weight: 200;
 }
 html .main .main-content .content .myself .content, html .main .main-content .content .tech .content, html .main .main-content .content .work .content, body .main .main-content .content .myself .content, body .main .main-content .content .tech .content, body .main .main-content .content .work .content {
   text-align: center;
-  font-weight: 600;
-  font-size: 300%;
+  font-weight: 500;
+  font-size: 250%;
 }
 html .main .main-content .content .myself button, html .main .main-content .content .tech button, html .main .main-content .content .work button, body .main .main-content .content .myself button, body .main .main-content .content .tech button, body .main .main-content .content .work button {
   font-size: 100%;
@@ -238,7 +238,8 @@ html .main .main-content .content .myself button, html .main .main-content .cont
 html .main .main-content .content .work .content, body .main .main-content .content .work .content {
   width: 100%;
   gap: 0;
-  font-size: 400%;
+  font-size: 300%;
+  font-weight: 500;
 }
 html .main .main-content .content .work .content hr, body .main .main-content .content .work .content hr {
   margin: 0;
@@ -317,6 +318,7 @@ html .main .footer .box .content .mid, body .main .footer .box .content .mid {
   padding-bottom: 121px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 html .main .footer .box .content .mid .left, body .main .footer .box .content .mid .left {
   justify-items: left;

@@ -184,10 +184,9 @@ html, body {
       .content {
         height: 100%;
         justify-items: center;
-        gap: 10rem;
         display: flex;
         flex-direction: column;
-        gap: 6rem;
+        gap: 8rem;
         .myself, .tech, .work {
           display: flex;
           flex-direction: column;
@@ -222,12 +221,13 @@ html, body {
             }   
           }
           .cat {
-            font-size: 150%; 
+            font-size: 150%;
+            font-weight: 200;
           }
           .content {
             text-align: center;
-            font-weight: 600;
-            font-size: 300%;
+            font-weight: 500;
+            font-size: 250%;
           }
           button {
             font-size: 100%;
@@ -242,7 +242,8 @@ html, body {
           .content {
             width: 100%;
             gap: 0;
-            font-size: 400%;
+            font-size: 300%;
+            font-weight: 500;
             hr {
               margin: 0;
               width: 100%;
@@ -348,6 +349,7 @@ html, body {
             padding-bottom: 121px;
             display: flex;
             justify-content: space-between;
+            align-items: flex-end;
             .left {
               justify-items: left;
               .content {

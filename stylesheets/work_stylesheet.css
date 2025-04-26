@@ -73,7 +73,7 @@ html .main .main-content .content .box, body .main .main-content .content .box {
   width: 50%;
   color: #02010a;
   box-sizing: border-box;
-  border: 1px solid #02010a;
+  border: 1px solid rgba(2, 1, 10, 0.5019607843);
   background-color: white;
   padding: 4rem;
 }
@@ -112,6 +112,7 @@ html .main .main-content .content #box-1 .img, html .main .main-content .content
   border: 1px solid #02010a;
 }
 html .main .main-content .content #box-4 .img, body .main .main-content .content #box-4 .img {
+  background-color: #02010a;
   background-size: cover;
 }
 html .main .footer::before, body .main .footer::before {
@@ -144,6 +145,7 @@ html .main .footer .box, body .main .footer .box {
 }
 html .main .footer .box .content, body .main .footer .box .content {
   width: 100%;
+  color: white;
 }
 html .main .footer .box .content .up, body .main .footer .box .content .up {
   padding-bottom: 40px;
