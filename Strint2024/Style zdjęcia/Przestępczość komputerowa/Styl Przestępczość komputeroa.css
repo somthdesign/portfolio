@@ -1,0 +1,502 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+nav {
+    position: fixed;
+    align-content: center;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    padding: 0 135px;
+    height: 100%;
+}
+
+nav .section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .logo {
+    justify-content: flex-start;
+}
+
+nav .refs {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
+    color: rgb(85, 85, 85);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    z-index: 0;
+}
+
+
+header .ov {
+    position: relative;
+    z-index: 1;
+    padding: 0 135px;
+    border-radius: 10px;
+    display: flex;
+}
+
+header .cls {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+header .cll {
+    box-sizing: border-box;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    flex: 1;
+    gap: 30px 10px;
+}
+
+header .big {
+    font-weight: 600;
+    align-content: center;
+    color: rgb(240, 12, 12); 
+    font-size: 65px;
+    font-kerning:auto;
+    flex: 2;
+}
+
+header .small {
+    font-weight: 500;
+    align-content: center;
+    color: rgb(55, 55, 55);
+    font-size: 18px;
+    flex: 2;
+}
+
+header .ref {
+    flex: 2;
+}
+
+header button {
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(240, 12, 12);
+    background: white;
+    box-shadow: 0px 0px 5px rgb(85, 85, 85, 0.3);
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header .big p {
+    line-height: 66.5px;
+}
+
+header .small p {
+    line-height: normal;
+}
+
+header .clr {
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+.txt1 {
+    display: flex;
+    padding: 100px 0;
+}
+
+.txt1 .cl {
+    display: flex;
+    flex-direction: column;
+    padding: 0 170px;
+    padding-right: 300px;
+    gap: 30px;
+}
+
+.txt1 .cl .tit {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.txt1 .cl .txt {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.txt2 {
+    display: flex;
+    padding: 100px 0;
+}
+
+.txt2 .cl {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.txt2 .cl .tit {
+    padding: 0 170px;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.txt2 .cl .des {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.txt2 .cl .txt {
+    width: 100%;
+}
+
+.txt2 .txt .cl .row {
+    padding: 0 170px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.txt2 .txt .cl .cll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgba(98, 98, 98, 0.504);
+    border-radius: 8px;
+    width: 100%;
+    height: 120px;
+    gap: 30px;
+    padding: 20px;
+}
+
+
+.txt2 .cl .txt .clr {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(98, 98, 98, 0.504);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    gap: 30px;
+}
+
+.txt2 .row .cll .title p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.txt2 .row .clr .title p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+.txt3 {
+    display: flex;
+    padding: 100px 0;
+}
+
+.txt3 .cl {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.txt3 .cl .tit {
+    padding: 0 170px;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.txt3 .cl .des {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.txt3 .cl .txt {
+    width: 100%;
+}
+
+.txt3 .txt .cl .row {
+    padding: 0 170px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.txt3 .txt .cl .cll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid rgba(98, 98, 98, 0.504);
+    border-radius: 8px;
+    width: 100%;
+    height: 900px;
+    gap: 30px;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+
+.txt3 .cl .txt .clr {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(98, 98, 98, 0.504);
+    border-radius: 8px;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    padding: 20px;
+    padding-left: 40px;
+    gap: 30px;
+}
+
+.txt3 .row .cll .title p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.txt3 .row .clr .title p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.txt3 .cl .txt .list li {
+    font-weight: 600;
+    line-height: 38px
+}
+
+.txt3 .cl .txt .list p {
+    font-weight: 500;
+    line-height: 24px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.news {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 90px 0;
+    width: 100%;
+}
+
+.newsall {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 100px;
+    gap: 60px;
+}
+
+
+.news .big {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.newscol {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.newscol a {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.newsrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    gap: 18px;
+}
+
+.newsrows img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.newsrows .art {
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid rgb(240, 12, 12);
+    background-color: white;
+    align-self: flex-start;
+    color: rgb(240, 12, 12);
+    padding: 5px;
+}
+
+.newsrows .newstxt {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: white;
+    width: 100%;
+    height: 90px;
+    align-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 1px rgb(85, 85, 85, 0.3);
+    font-weight: 500;
+    z-index: 1000;
+}
+
+footer .container {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    padding: 0 9%;
+    height: 100%;
+}
+
+footer .section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .logo {
+    justify-content: flex-start;
+}
+
+footer .logo img {
+    width: 50px;
+}
+
+footer .null {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+footer .null a {
+    color: white;
+    text-decoration: none;
+}
