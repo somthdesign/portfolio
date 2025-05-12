@@ -108,10 +108,45 @@ html .main .main-content .content .box .undercontent .right, body .main .main-co
   width: 60%;
   text-align: right;
 }
-html .main .main-content .content #box-1 .img, html .main .main-content .content #box-2 .img, html .main .main-content .content #box-3 .img, body .main .main-content .content #box-1 .img, body .main .main-content .content #box-2 .img, body .main .main-content .content #box-3 .img {
-  border: 1px solid #02010a;
+html .main .main-content .content .box a, body .main .main-content .content .box a {
+  text-decoration: none;
+  color: #02010a;
 }
-html .main .main-content .content #box-4 .img, body .main .main-content .content #box-4 .img {
+html .main .main-content .content .box a .img, body .main .main-content .content .box a .img {
+  width: 100%;
+  height: 96%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html .main .main-content .content .box a .undercontent, body .main .main-content .content .box a .undercontent {
+  padding-top: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+html .main .main-content .content .box a .undercontent .left, body .main .main-content .content .box a .undercontent .left {
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-items: left;
+}
+html .main .main-content .content .box a .undercontent .left .title, body .main .main-content .content .box a .undercontent .left .title {
+  font-size: 1.25em;
+}
+html .main .main-content .content .box a .undercontent .left .subtitle, body .main .main-content .content .box a .undercontent .left .subtitle {
+  font-size: medium;
+}
+html .main .main-content .content .box a .undercontent .right, body .main .main-content .content .box a .undercontent .right {
+  opacity: 55%;
+  width: 60%;
+  text-align: right;
+}
+html .main .main-content .content #box-5 .img, html .main .main-content .content #box-6 .img, html .main .main-content .content #box-7 .img, html .main .main-content .content #box-8 .img, body .main .main-content .content #box-5 .img, body .main .main-content .content #box-6 .img, body .main .main-content .content #box-7 .img, body .main .main-content .content #box-8 .img {
+  background-size: cover;
+}
+html .main .main-content .content #box-14 .img, body .main .main-content .content #box-14 .img {
   background-color: #02010a;
   background-size: cover;
 }
