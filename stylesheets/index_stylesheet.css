@@ -372,6 +372,7 @@ html .main .active, body .main .active {
 html .main .hidden, body .main .hidden {
   transform: translateY(-100%);
 }
+
 @media (max-width: 1600px) {
   html .main .footer .box, body .main .footer .box {
     position: relative;
