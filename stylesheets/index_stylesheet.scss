@@ -2,6 +2,9 @@ $main-font: "Inter", serif;
 $side-font: "Sorts Mill Goudy", serif;
 $background-clr: #02010a;
 $txt-clr: white;
+$txt-clr-w: white;
+$txt-clr-b: #02010a;
+$clr-white: white;
 html, body {
   scroll-behavior: initial;
   padding: 0;
@@ -408,6 +411,64 @@ html, body {
     }
     .hidden {
       transform: translateY(-100%);
+    }
+  }
+}
+@media (max-width: 1600px) {
+  html, body {
+    .main {
+      .footer {
+        .box {
+          position: relative; 
+          padding: 0 19.5rem;
+          padding-top: 4rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          top: 90.75px;
+          .content {
+            width: 100%;
+            color: $clr-white;
+            .up {
+              padding-bottom: 40px;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              .left, .right {
+                a {
+                  font-size: 1.5rem;
+                }
+              }
+              .backtop {
+                img {
+                  height: 1rem;
+                  rotate: 180deg;
+                }
+              }
+            }
+            .mid {
+              padding-bottom: 90.75px;
+              .left {
+                .content {
+                  font-size: 1.5rem;
+                }
+              }
+              .right {
+                justify-items: right;
+                .content {
+                  text-align: right;
+                  font-size: 1.5rem;
+                }
+              }
+            }
+          }
+            .background {
+              position: relative;
+              width: 140%;
+              overflow: visible;
+          }
+        }
+      }
     }
   }
 }
